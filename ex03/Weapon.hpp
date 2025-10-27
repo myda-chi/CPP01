@@ -14,6 +14,5 @@ public:
     const std::string& getType();
     void setType(std::string newvalue);
 
-}
-
+};
 #endif
