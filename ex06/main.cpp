@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myda-chi <myda-chi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 15:47:36 by myda-chi          #+#    #+#             */
-/*   Updated: 2025/10/28 15:47:57 by myda-chi         ###   ########.fr       */
+/*   Created: 2025/10/28 15:48:38 by myda-chi          #+#    #+#             */
+/*   Updated: 2025/10/28 15:50:17 by myda-chi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Harl.hpp"
 #include <iostream>
 
-Weapon::Weapon(std::string type):_type(type)
+int main(int ac, char **av)
 {
-}
-Weapon::~Weapon()
-{
-}
-const std::string& Weapon::getType()
-{
-    return _type;
-}
-void Weapon::setType(std::string newvalue)
-{
-    this->_type = newvalue;
+    Harl harl;
+
+    if (ac != 2)
+    {
+        std::cout << "Usage: ./harlFilter <level>" << std::endl;
+        return 1;
+    }
+    harl.complain(av[1]);
+    return 0;
 }
